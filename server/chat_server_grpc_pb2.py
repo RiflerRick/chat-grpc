@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='chat-server-grpc.proto',
   package='chat_server_grpc',
   syntax='proto3',
-  serialized_pb=_b('\n\x16\x63hat-server-grpc.proto\x12\x10\x63hat_server_grpc\"-\n\x07Request\x12\x11\n\tclient_id\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\"\x1b\n\x08Response\x12\x0f\n\x07message\x18\x01 \x01(\t2V\n\nChatServer\x12H\n\x0b\x43ommunicate\x12\x19.chat_server_grpc.Request\x1a\x1a.chat_server_grpc.Response(\x01\x30\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x16\x63hat-server-grpc.proto\x12\x10\x63hat_server_grpc\"-\n\x07Request\x12\x11\n\tclient_id\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\"\x1b\n\x08Response\x12\x0f\n\x07message\x18\x01 \x01(\t2R\n\nChatServer\x12\x44\n\x0b\x43ommunicate\x12\x19.chat_server_grpc.Request\x1a\x1a.chat_server_grpc.Responseb\x06proto3')
 )
 
 
@@ -120,7 +120,7 @@ _CHATSERVER = _descriptor.ServiceDescriptor(
   index=0,
   options=None,
   serialized_start=120,
-  serialized_end=206,
+  serialized_end=202,
   methods=[
   _descriptor.MethodDescriptor(
     name='Communicate',

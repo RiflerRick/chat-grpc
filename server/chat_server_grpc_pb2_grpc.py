@@ -14,7 +14,7 @@ class ChatServerStub(object):
     Args:
       channel: A grpc.Channel.
     """
-    self.Communicate = channel.stream_stream(
+    self.Communicate = channel.unary_unary(
         '/chat_server_grpc.ChatServer/Communicate',
         request_serializer=chat__server__grpc__pb2.Request.SerializeToString,
         response_deserializer=chat__server__grpc__pb2.Response.FromString,
@@ -25,7 +25,7 @@ class ChatServerServicer(object):
   # missing associated documentation comment in .proto file
   pass
 
-  def Communicate(self, request_iterator, context):
+  def Communicate(self, request, context):
     # missing associated documentation comment in .proto file
     pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -35,7 +35,7 @@ class ChatServerServicer(object):
 
 def add_ChatServerServicer_to_server(servicer, server):
   rpc_method_handlers = {
-      'Communicate': grpc.stream_stream_rpc_method_handler(
+      'Communicate': grpc.unary_unary_rpc_method_handler(
           servicer.Communicate,
           request_deserializer=chat__server__grpc__pb2.Request.FromString,
           response_serializer=chat__server__grpc__pb2.Response.SerializeToString,
