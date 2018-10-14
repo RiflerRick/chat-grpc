@@ -74,6 +74,7 @@ def run():
 
     response_queue = Queue.Queue()
 
+    # this implementation is incorrect as it attempts to read and write using 2 threads in the same terminal
     read_thread = ReadThread(stub, response_queue)
     read_thread.start()
 
